@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for zoya 🎀</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root{--pink:#ff76ad;--hot:#ff3e91;--cream:#fff7fb;--ink:#78344f}
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;overflow-x:hidden;
+ font-family:'DM Sans',sans-serif;color:var(--ink);
+ background:radial-gradient(circle at 20% 10%,#fff 0,transparent 25%),
+ linear-gradient(135deg,#ffe4ef,#ffd0e6 48%,#fff1f7);
+ text-align:center
+}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(92%,650px);margin:auto;padding:28px 0 60px}
+.top{font-size:13px;letter-spacing:3px;font-weight:800}
+.bow{font-size:68px;animation:bob 2s ease-in-out infinite}
+h1{font:italic 600 clamp(42px,10vw,72px) 'Playfair Display',serif;margin:8px 0;color:#d94383}
+.sub{font-size:14px;line-height:1.8}
+.card{
+ background:#ffffffd9;border:1px solid #fff;border-radius:28px;
+ padding:26px 20px;margin:20px 0;
+ box-shadow:0 15px 45px #d94c8720
+}
+.pill{display:inline-block;border-radius:30px;background:#ffe3ef;padding:8px 13px;font-size:12px;font-weight:800}
+h2{font:italic 600 27px 'Playfair Display',serif}
+p{line-height:1.85}
+.btn{
+ border:0;border-radius:30px;padding:13px 19px;margin:5px;
+ background:var(--hot);color:white;font-weight:800;
+ box-shadow:0 6px 0 #c62b70;transition:.18s
+}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.btn.soft{background:#ffe4ef;color:#a02e62;box-shadow:0 5px 0 #efb2ce}
+.btn.dark{background:#8d4770;box-shadow:0 5px 0 #63304e}
+.hidden{display:none}
+.reveal{background:#fff0f7;border-radius:20px;padding:18px;margin-top:18px;animation:pop .4s}
+.mini{font-size:12px;opacity:.75}
+#result{font-weight:700;min-height:28px;margin:14px 0}
+.heart{position:fixed;bottom:-35px;pointer-events:none;animation:floatUp 4s linear forwards;z-index:4}
+footer{font-size:12px;margin-top:28px}
+@keyframes bob{50%{transform:translateY(-8px) rotate(4deg)}}
+@keyframes pop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="top">A VERY IMPORTANT BESTIE ANNOUNCEMENT</div>
+ <div class="bow">🎀</div>
+ <h1>Hey, Zoya ♡</h1>
+ <p class="sub">stop scrolling, miss main character.<br>
+ someone made a whole little universe for you.</p>
+
+ <div class="card">
+  <span class="pill">✧ certified bestie-coded ✧</span>
+  <h2>Welcome to your pink universe</h2>
+  <p>Disclaimer: this website contains 101% cuteness,<br>
+  unnecessary drama and one emotionally attached idiot. 💗</p>
+  <button class="btn" onclick="startMusic()">🎵 play our little tune</button>
+  <button class="btn soft" onclick="toggleMusic()">♪ music on / off</button>
+  <p class="mini">The tune is made by this page, not a song download.</p>
+ </div>
+
+ <div class="card">
+  <h2>First, a very serious question...</h2>
+  <p>Are you ready for a highly dramatic surprise? 👀</p>
+  <button class="btn" onclick="drama()">YES, OBVIOUSLY</button>
+  <button class="btn soft" id="noBtn" onclick="runAway()">NOPE 😭</button>
+  <div id="result"></div>
+ </div>
+
+ <div class="card">
+  <h2>📩 Your secret letter</h2>
+  <p>Open it only if you're ready for wholesome bestie energy.</p>
+  <button class="btn" onclick="letter()">open my letter 💌</button>
+  <div id="letterBox" class="reveal hidden">
+   <p>Dear Zoya, 🎀</p>
+   <p>Maybe I don't always say it properly, but I'm genuinely glad
+   our friendship exists. You don't have to be perfect, funny,
+   cheerful or available every second to matter to someone.</p>
+   <p>I hope you get plenty of reasons to smile, people who listen
+   when you need them, and days that feel a little lighter.
+   Even ordinary conversations can become lovely memories.</p>
+   <p>So here's your reminder: you're appreciated, your feelings
+   matter, and you deserve kindness — today and every day. 🩷</p>
+   <p><b>From your certified chaos bestie ♡</b></p>
+  </div>
+ </div>
+
+ <div class="card">
+  <h2>👀 Sister-teasing department</h2>
+  <p>Breaking news: Zoya's sister has been appointed as the
+  official CEO of “Zoya ko chhedna Pvt. Ltd.” 😭</p>
+  <button class="btn soft" onclick="sister()">reveal the report</button>
+  <div id="sisterBox" class="reveal hidden">
+   <p>Official report: Sister teasing level = 100/10 😂</p>
+   <p>But the sister gets one free pass because sibling teasing
+   is basically a full-time comedy show. No refunds. 🎭</p>
+   <p class="mini">P.S. This is a joke, not a roast war. 🫶</p>
+  </div>
+ </div>
+
+ <div class="card">
+  <h2>💅 Bestie personality check</h2>
+  <p>Tap for your completely unofficial daily diagnosis.</p>
+  <button class="btn" onclick="vibe()">check my vibe ✨</button>
+  <div id="vibeBox" class="reveal hidden"></div>
+ </div>
+
+ <div class="card">
+  <h2>One last tiny surprise...</h2>
+  <p>Press the button. Trust the process. 🥹</p>
+  <button class="btn" onclick="finale()">DO NOT PRESS 🚨</button>
+  <div id="finalBox" class="reveal hidden">
+   <div style="font-size:40px">🩷🫶🎀</div>
+   <h2>you matter, bestie.</h2>
+   <p>May your days be softer, your laughs louder,
+   your worries lighter and your memories sweeter.</p>
+   <p>End of announcement. Begin the happy dance. 💃</p>
+  </div>
+ </div>
+ <footer>made with pink pixels & friendship ♡<br>for Zoya, always 🎀</footer>
+</div>
+
+<script>
+let audioCtx=null, master=null, musicOn=false, timer=null, noteIndex=0;
+const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46];
+
+function startMusic(){
+ if(!audioCtx){
+  audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  master=audioCtx.createGain();
+  master.gain.value=0.12;
+  master.connect(audioCtx.destination);
+ }
+ audioCtx.resume();
+ if(musicOn)return;
+ musicOn=true;
+ playNote();
+ timer=setInterval(playNote,360);
+}
+function playNote(){
+ if(!musicOn||!audioCtx)return;
+ const osc=audioCtx.createOscillator();
+ const gain=audioCtx.createGain();
+ osc.type='sine';
+ osc.frequency.value=notes[noteIndex%notes.length];
+ noteIndex++;
+ gain.gain.setValueAtTime(0.0001,audioCtx.currentTime);
+ gain.gain.exponentialRampToValueAtTime(0.25,audioCtx.currentTime+0.03);
+ gain.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+0.31);
+ osc.connect(gain);gain.connect(master);
+ osc.start();osc.stop(audioCtx.currentTime+0.33);
+}
+function toggleMusic(){
+ if(!audioCtx||!musicOn){startMusic();return}
+ musicOn=false;clearInterval(timer);
+}
+function drama(){
+ document.getElementById('result').textContent=
+ "OMG bestie, your surprise has officially entered its main-character era. 🎀";
+ hearts(15);
+}
+function runAway(){
+ const b=document.getElementById('noBtn');
+ b.textContent="OK FINE 😭";
+ document.getElementById('result').textContent=
+ "Too late bestie. The friendship committee has already approved this surprise. 💗";
+}
+function letter(){
+ document.getElementById('letterBox').classList.toggle('hidden');
+ hearts(8);
+}
+function sister(){
+ document.getElementById('sisterBox').classList.toggle('hidden');
+}
+const vibes=[
+ "100% iconic, 0% ordinary. 💅",
+ "Certified yapper with a heart of gold. 🎀",
+ "Main character energy, even on low-battery days. 🩷",
+ "Cute chaos, but make it Pinterest. ✨",
+ "A little dramatic, a lot lovable. 🫶"
+];
+function vibe(){
+ const box=document.getElementById('vibeBox');
+ box.textContent=vibes[Math.floor(Math.random()*vibes.length)];
+ box.classList.remove('hidden');
+}
+function finale(){
+ document.getElementById('finalBox').classList.remove('hidden');
+ hearts(35);
+}
+function hearts(n){
+ const symbols=['💗','💖','💕','🎀','✨','🩷'];
+ for(let i=0;i<n;i++){
+  const el=document.createElement('span');
+  el.className='heart';
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.fontSize=(16+Math.random()*20)+'px';
+  el.style.animationDuration=(2.5+Math.random()*2.5)+'s';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),5200);
+ }
+}
+</script>
+</body>
+</html>
